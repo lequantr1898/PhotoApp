@@ -13,21 +13,21 @@ import java.lang.reflect.Type;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ArticleData {
-  public static ArticleList data;
+public class UserData {
+  public static UserList data;
   private Context context;
   private GridView gridview;
   private final ExecutorService executor = Executors.newSingleThreadExecutor();
 
-  public ArticleData(Context context, GridView gridview) {
+  public UserData(Context context, GridView gridview) {
     this.context = context;
     this.gridview = gridview;
   }
 
-  public static Article getPhotoFromId(int id) {
-    for (int i = 0; i < data.getArticles().size(); i++)
-      if (data.getArticles().get(i).getArticle_id() == id)
-        return data.getArticles().get(i);
+  public static UserProfile getUserFromId(int id) {
+    for (int i = 0; i < data.getUsers().size(); i++)
+      if (data.getUsers().get(i).getId() == id)
+        return data.getUsers().get(i);
     return null;
   }
 
@@ -37,8 +37,8 @@ public class ArticleData {
           if(file!=null)
             activity.runOnUiThread(()->{
               Gson gson = new Gson();
-              data = gson.fromJson(readText(file), (Type) ArticleList.class);
-              ArticleAdapter adapter = new ArticleAdapter(data.getArticles(), context);
+              data = gson.fromJson(readText(file), (Type) UserList.class);
+              UserAdapter adapter = new UserAdapter(data.getUsers(), context);
               gridview.setAdapter(adapter);
             });
         });

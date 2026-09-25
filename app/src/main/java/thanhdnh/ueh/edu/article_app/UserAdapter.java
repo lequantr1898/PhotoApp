@@ -12,28 +12,28 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class ArticleAdapter extends BaseAdapter {
-  private ArrayList<Article> article_list;
+public class UserAdapter extends BaseAdapter {
+  private ArrayList<UserProfile> user_list;
   private Context context;
 
-  public ArticleAdapter(ArrayList<Article> article_list, Context context) {
-    this.article_list = article_list;
+  public UserAdapter(ArrayList<UserProfile> user_list, Context context) {
+    this.user_list = user_list;
     this.context = context;
   }
 
   @Override
   public int getCount() {
-    return article_list.size();
+    return user_list.size();
   }
 
   @Override
   public Object getItem(int position) {
-    return article_list.get(position);
+    return user_list.get(position);
   }
 
   @Override
   public long getItemId(int position) {
-    return article_list.get(position).getArticle_id();
+    return user_list.get(position).getId();
   }
 
   @Override
@@ -42,7 +42,7 @@ public class ArticleAdapter extends BaseAdapter {
     LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     if (convertView == null) {
       dataitem = new MyView();
-      convertView = inflater.inflate(R.layout.article_disp_tpl, null);
+      convertView = inflater.inflate(R.layout.user_disp_tpl, null);
       dataitem.iv_photo = convertView.findViewById(R.id.imv_photo);
       dataitem.tv_caption = convertView.findViewById(R.id.tv_title);
       convertView.setTag(dataitem);
@@ -50,8 +50,8 @@ public class ArticleAdapter extends BaseAdapter {
       dataitem = (MyView) convertView.getTag();
     }
 
-    Picasso.get().load(article_list.get(position).getArticle_image()).resize(300, 400).centerCrop().into(dataitem.iv_photo);
-    dataitem.tv_caption.setText(article_list.get(position).getArticle_title());
+    Picasso.get().load(user_list.get(position).getAvatar_url()).resize(300, 400).centerCrop().into(dataitem.iv_photo);
+    dataitem.tv_caption.setText(user_list.get(position).getUsername());
     return convertView;
   }
 

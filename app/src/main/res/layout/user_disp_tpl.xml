@@ -21,7 +21,7 @@
     android:fontFamily="cursive"
     android:paddingTop="5sp"
     android:paddingBottom="10sp"
-    android:text="Caption"
+    android:text="Username"
     android:textColor="@color/white"
     android:textSize="18sp" />
 </LinearLayout>

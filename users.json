@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "nguyenvana",
+      "email": "nguyenvana@gmail.com",
+      "tel": "0901234567",
+      "description": "Sinh vien nam 3 nganh CNTT, dam me lap trinh va thiet ke giao dien.",
+      "avatar_url": "https://i.pravatar.cc/300?img=1",
+      "hobby": "Lap trinh, Doc sach, Choi game"
+    },
+    {
+      "id": 2,
+      "username": "tranthib",
+      "email": "tranthib@gmail.com",
+      "tel": "0912345678",
+      "description": "Designer tai cong ty ABC, yeu thich nghe thuat va sang tao.",
+      "avatar_url": "https://i.pravatar.cc/300?img=2",
+      "hobby": "Ve tranh, Chup anh, Du lich"
+    },
+    {
+      "id": 3,
+      "username": "levanc",
+      "email": "levanc@gmail.com",
+      "tel": "0923456789",
+      "description": "Ky su phan mem voi 5 nam kinh nghiem phat trien ung dung mobile.",
+      "avatar_url": "https://i.pravatar.cc/300?img=3",
+      "hobby": "Boi loi, Chay bo, Nau an"
+    },
+    {
+      "id": 4,
+      "username": "phamthid",
+      "email": "phamthid@gmail.com",
+      "tel": "0934567890",
+      "description": "Giang vien dai hoc, chuyen nganh tri tue nhan tao va machine learning.",
+      "avatar_url": "https://i.pravatar.cc/300?img=4",
+      "hobby": "Nghien cuu, Viet blog, Yoga"
+    },
+    {
+      "id": 5,
+      "username": "hoangvane",
+      "email": "hoangvane@gmail.com",
+      "tel": "0945678901",
+      "description": "Freelancer chuyen ve web development va thiet ke UI/UX.",
+      "avatar_url": "https://i.pravatar.cc/300?img=5",
+      "hobby": "Code, Nghe nhac, Xem phim"
+    },
+    {
+      "id": 6,
+      "username": "dovang",
+      "email": "dovang@gmail.com",
+      "tel": "0956789012",
+      "description": "Nhan vien marketing tai startup cong nghe, dam me truyen thong so.",
+      "avatar_url": "https://i.pravatar.cc/300?img=6",
+      "hobby": "Viet content, Choi the thao, Doc bao"
+    },
+    {
+      "id": 7,
+      "username": "buithih",
+      "email": "buithih@gmail.com",
+      "tel": "0967890123",
+      "description": "Data analyst voi ky nang phan tich du lieu va bao cao thong ke.",
+      "avatar_url": "https://i.pravatar.cc/300?img=7",
+      "hobby": "Phan tich du lieu, Tap gym, Nau an"
+    },
+    {
+      "id": 8,
+      "username": "ngovani",
+      "email": "ngovani@gmail.com",
+      "tel": "0978901234",
+      "description": "Product manager tai cong ty phan mem, kinh nghiem quan ly du an Agile.",
+      "avatar_url": "https://i.pravatar.cc/300?img=8",
+      "hobby": "Quan ly du an, Doc sach, Choi co vua"
+    },
+    {
+      "id": 9,
+      "username": "lythik",
+      "email": "lythik@gmail.com",
+      "tel": "0989012345",
+      "description": "Sinh vien tot nghiep lop ky su phan mem, dang thuc tap tai cong ty.",
+      "avatar_url": "https://i.pravatar.cc/300?img=9",
+      "hobby": "Hoc ngoai ngu, Du lich, Chup anh"
+    },
+    {
+      "id": 10,
+      "username": "trinhvanl",
+      "email": "trinhvanl@gmail.com",
+      "tel": "0990123456",
+      "description": "Backend developer chuyen ve Java va Spring Boot framework.",
+      "avatar_url": "https://i.pravatar.cc/300?img=10",
+      "hobby": "Lap trinh, Choi guitar, Xem phim"
+    }
+  ]
+}
