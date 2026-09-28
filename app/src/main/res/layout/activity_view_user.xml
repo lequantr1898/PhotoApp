@@ -3,7 +3,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:background="#F0F0F0"
+  android:background="@color/black"
   tools:context=".ViewUserActivity">
 
   <LinearLayout
@@ -12,12 +12,23 @@
     android:orientation="vertical"
     android:padding="20dp">
 
+    <!-- Nút Back ở trên cùng -->
+    <Button
+      android:id="@+id/btn_back"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="← Back"
+      android:textSize="14sp"
+      android:textColor="#FFFFFF"
+      android:backgroundTint="#333333"
+      android:layout_marginBottom="16dp" />
+
     <!-- Card chính chứa thông tin user -->
     <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="vertical"
-      android:background="@android:color/white"
+      android:background="#1E1E1E"
       android:padding="20dp">
 
       <!-- Phần trên: Username + ID bên trái, Avatar bên phải -->
@@ -43,7 +54,7 @@
             android:text="Username"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="#212121" />
+            android:textColor="#FFFFFF" />
 
           <TextView
             android:id="@+id/tv_detail_id"
@@ -51,7 +62,7 @@
             android:layout_height="wrap_content"
             android:text="ID"
             android:textSize="14sp"
-            android:textColor="#757575"
+            android:textColor="#B0B0B0"
             android:layout_marginTop="4dp" />
 
         </LinearLayout>
@@ -72,7 +83,7 @@
         android:layout_height="wrap_content"
         android:text="Email:"
         android:textSize="16sp"
-        android:textColor="#212121"
+        android:textColor="#E0E0E0"
         android:layout_marginBottom="10dp" />
 
       <TextView
@@ -81,7 +92,7 @@
         android:layout_height="wrap_content"
         android:text="Tel:"
         android:textSize="16sp"
-        android:textColor="#212121"
+        android:textColor="#E0E0E0"
         android:layout_marginBottom="10dp" />
 
       <TextView
@@ -90,7 +101,7 @@
         android:layout_height="wrap_content"
         android:text="Description:"
         android:textSize="16sp"
-        android:textColor="#212121"
+        android:textColor="#E0E0E0"
         android:layout_marginBottom="10dp" />
 
       <TextView
@@ -99,7 +110,7 @@
         android:layout_height="wrap_content"
         android:text="Hobby:"
         android:textSize="16sp"
-        android:textColor="#212121" />
+        android:textColor="#E0E0E0" />
 
     </LinearLayout>
 
