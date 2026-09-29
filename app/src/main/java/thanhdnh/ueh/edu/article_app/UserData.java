@@ -96,16 +96,16 @@ public class UserData {
 
   private UserList createFallbackUsers() {
     ArrayList<UserProfile> list = new ArrayList<>();
-    list.add(new UserProfile(1, "nguyenvana", "nguyenvana@gmail.com", "0901234567", "Sinh vien nam 3 nganh CNTT", "https://randomuser.me/api/portraits/men/11.jpg", "Lap trinh, Doc sach"));
-    list.add(new UserProfile(2, "tranthib", "tranthib@gmail.com", "0912345678", "Designer tai cong ty ABC", "https://randomuser.me/api/portraits/women/12.jpg", "Ve tranh, Chup anh"));
-    list.add(new UserProfile(3, "levanc", "levanc@gmail.com", "0923456789", "Ky su phan mem Mobile", "https://randomuser.me/api/portraits/men/33.jpg", "Boi loi, Chay bo"));
-    list.add(new UserProfile(4, "phamthid", "phamthid@gmail.com", "0934567890", "Giang vien dai hoc AI", "https://randomuser.me/api/portraits/women/44.jpg", "Nghien cuu, Viet blog"));
-    list.add(new UserProfile(5, "hoangvane", "hoangvane@gmail.com", "0945678901", "Freelancer Web UI/UX", "https://randomuser.me/api/portraits/men/55.jpg", "Code, Nghe nhac"));
-    list.add(new UserProfile(6, "dovang", "dovang@gmail.com", "0956789012", "Marketing Specialist", "https://randomuser.me/api/portraits/women/66.jpg", "Viet content, The thao"));
-    list.add(new UserProfile(7, "buithih", "buithih@gmail.com", "0967890123", "Data Analyst", "https://randomuser.me/api/portraits/men/77.jpg", "Phan tich, Tap gym"));
-    list.add(new UserProfile(8, "ngovani", "ngovani@gmail.com", "0978901234", "Product Manager", "https://randomuser.me/api/portraits/women/88.jpg", "Quan ly, Co vua"));
-    list.add(new UserProfile(9, "lythik", "lythik@gmail.com", "0989012345", "Sinh vien thuc tap", "https://randomuser.me/api/portraits/men/99.jpg", "Hoc ngoai ngu, Du lich"));
-    list.add(new UserProfile(10, "trinhvanl", "trinhvanl@gmail.com", "0990123456", "Backend Java Developer", "https://randomuser.me/api/portraits/women/90.jpg", "Lap trinh, Guitar"));
+    list.add(new UserProfile(1, "nguyenvana", "nguyenvana@gmail.com", "0901234567", "Sinh vien nam 3 nganh CNTT", "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar1.jpg", "Lap trinh, Doc sach"));
+    list.add(new UserProfile(2, "tranthib", "tranthib@gmail.com", "0912345678", "Designer tai cong ty ABC", "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar2.jpg", "Ve tranh, Chup anh"));
+    list.add(new UserProfile(3, "levanc", "levanc@gmail.com", "0923456789", "Ky su phan mem Mobile", "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar3.jpg", "Boi loi, Chay bo"));
+    list.add(new UserProfile(4, "phamthid", "phamthid@gmail.com", "0934567890", "Giang vien dai hoc AI", "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar4.jpg", "Nghien cuu, Viet blog"));
+    list.add(new UserProfile(5, "hoangvane", "hoangvane@gmail.com", "0945678901", "Freelancer Web UI/UX", "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar5.jpg", "Code, Nghe nhac"));
+    list.add(new UserProfile(6, "dovang", "dovang@gmail.com", "0956789012", "Marketing Specialist", "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar6.jpg", "Viet content, The thao"));
+    list.add(new UserProfile(7, "buithih", "buithih@gmail.com", "0967890123", "Data Analyst", "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar7.jpg", "Phan tich, Tap gym"));
+    list.add(new UserProfile(8, "ngovani", "ngovani@gmail.com", "0978901234", "Product Manager", "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar8.jpg", "Quan ly, Co vua"));
+    list.add(new UserProfile(9, "lythik", "lythik@gmail.com", "0989012345", "Sinh vien thuc tap", "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar9.jpg", "Hoc ngoai ngu, Du lich"));
+    list.add(new UserProfile(10, "trinhvanl", "trinhvanl@gmail.com", "0990123456", "Backend Java Developer", "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar10.jpg", "Lap trinh, Guitar"));
     return new UserList(list);
   }
 }

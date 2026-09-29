@@ -6,7 +6,7 @@
       "email": "nguyenvana@gmail.com",
       "tel": "0901234567",
       "description": "Sinh vien nam 3 nganh CNTT, dam me lap trinh va thiet ke giao dien.",
-      "avatar_url": "https://randomuser.me/api/portraits/men/11.jpg",
+      "avatar_url": "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar1.jpg",
       "hobby": "Lap trinh, Doc sach, Choi game"
     },
     {
@@ -15,7 +15,7 @@
       "email": "tranthib@gmail.com",
       "tel": "0912345678",
       "description": "Designer tai cong ty ABC, yeu thich nghe thuat va sang tao.",
-      "avatar_url": "https://randomuser.me/api/portraits/women/12.jpg",
+      "avatar_url": "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar2.jpg",
       "hobby": "Ve tranh, Chup anh, Du lich"
     },
     {
@@ -24,7 +24,7 @@
       "email": "levanc@gmail.com",
       "tel": "0923456789",
       "description": "Ky su phan mem voi 5 nam kinh nghiem phat trien ung dung mobile.",
-      "avatar_url": "https://randomuser.me/api/portraits/men/33.jpg",
+      "avatar_url": "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar3.jpg",
       "hobby": "Boi loi, Chay bo, Nau an"
     },
     {
@@ -33,7 +33,7 @@
       "email": "phamthid@gmail.com",
       "tel": "0934567890",
       "description": "Giang vien dai hoc, chuyen nganh tri tue nhan tao va machine learning.",
-      "avatar_url": "https://randomuser.me/api/portraits/women/44.jpg",
+      "avatar_url": "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar4.jpg",
       "hobby": "Nghien cuu, Viet blog, Yoga"
     },
     {
@@ -42,7 +42,7 @@
       "email": "hoangvane@gmail.com",
       "tel": "0945678901",
       "description": "Freelancer chuyen ve web development va thiet ke UI/UX.",
-      "avatar_url": "https://randomuser.me/api/portraits/men/55.jpg",
+      "avatar_url": "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar5.jpg",
       "hobby": "Code, Nghe nhac, Xem phim"
     },
     {
@@ -51,7 +51,7 @@
       "email": "dovang@gmail.com",
       "tel": "0956789012",
       "description": "Nhan vien marketing tai startup cong nghe, dam me truyen thong so.",
-      "avatar_url": "https://randomuser.me/api/portraits/women/66.jpg",
+      "avatar_url": "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar6.jpg",
       "hobby": "Viet content, Choi the thao, Doc bao"
     },
     {
@@ -60,7 +60,7 @@
       "email": "buithih@gmail.com",
       "tel": "0967890123",
       "description": "Data analyst voi ky nang phan tich du lieu va bao cao thong ke.",
-      "avatar_url": "https://randomuser.me/api/portraits/men/77.jpg",
+      "avatar_url": "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar7.jpg",
       "hobby": "Phan tich du lieu, Tap gym, Nau an"
     },
     {
@@ -69,7 +69,7 @@
       "email": "ngovani@gmail.com",
       "tel": "0978901234",
       "description": "Product manager tai cong ty phan mem, kinh nghiem quan ly du an Agile.",
-      "avatar_url": "https://randomuser.me/api/portraits/women/88.jpg",
+      "avatar_url": "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar8.jpg",
       "hobby": "Quan ly du an, Doc sach, Choi co vua"
     },
     {
@@ -78,7 +78,7 @@
       "email": "lythik@gmail.com",
       "tel": "0989012345",
       "description": "Sinh vien tot nghiep lop ky su phan mem, dang thuc tap tai cong ty.",
-      "avatar_url": "https://randomuser.me/api/portraits/men/99.jpg",
+      "avatar_url": "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar9.jpg",
       "hobby": "Hoc ngoai ngu, Du lich, Chup anh"
     },
     {
@@ -87,7 +87,7 @@
       "email": "trinhvanl@gmail.com",
       "tel": "0990123456",
       "description": "Backend developer chuyen ve Java va Spring Boot framework.",
-      "avatar_url": "https://randomuser.me/api/portraits/women/90.jpg",
+      "avatar_url": "https://raw.githubusercontent.com/lequantr1898/PhotoApp/main/images/avatar10.jpg",
       "hobby": "Lap trinh, Choi guitar, Xem phim"
     }
   ]
