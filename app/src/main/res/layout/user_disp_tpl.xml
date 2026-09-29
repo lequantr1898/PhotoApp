@@ -7,6 +7,17 @@
   android:paddingTop="5sp"
   android:paddingBottom="5sp">
 
+  <!-- Thanh tiến trình dạng nằm ngang (Horizontal ProgressBar) -->
+  <ProgressBar
+    android:id="@+id/pb_item"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_width="140dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:max="100"
+    android:progress="0"
+    android:visibility="gone" />
+
   <ImageView
     android:id="@+id/imv_photo"
     android:layout_width="150dp"

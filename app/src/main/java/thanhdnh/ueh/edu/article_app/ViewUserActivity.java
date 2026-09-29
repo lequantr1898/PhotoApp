@@ -1,19 +1,22 @@
 package thanhdnh.ueh.edu.article_app;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.squareup.picasso.Picasso;
-
 public class ViewUserActivity extends AppCompatActivity {
   Button btn_back;
   ImageView iv_detail_avatar;
+  ProgressBar pb_detail_loading;
   TextView tv_detail_username, tv_detail_id, tv_detail_email, tv_detail_tel, tv_detail_description, tv_detail_hobby;
+  private Handler mainHandler = new Handler(Looper.getMainLooper());
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,7 @@ public class ViewUserActivity extends AppCompatActivity {
 
     btn_back = findViewById(R.id.btn_back);
     iv_detail_avatar = findViewById(R.id.iv_detail_avatar);
+    pb_detail_loading = findViewById(R.id.pb_detail_loading);
     tv_detail_username = findViewById(R.id.tv_detail_username);
     tv_detail_id = findViewById(R.id.tv_detail_id);
     tv_detail_email = findViewById(R.id.tv_detail_email);
@@ -42,12 +46,15 @@ public class ViewUserActivity extends AppCompatActivity {
     UserProfile user = UserData.getUserFromId(id);
 
     if (user != null) {
-      // Load avatar với Picasso, resize và cắt ảnh vừa khung
-      Picasso.get()
-        .load(user.getAvatar_url())
-        .resize(400, 400)
-        .centerCrop()
-        .into(iv_detail_avatar);
+      // Tải avatar bằng hàm downloadWithProgress và cập nhật thanh tiến trình nằm ngang
+      Downloader.downloadWithProgress(
+        user.getAvatar_url(),
+        mainHandler,
+        this,
+        getCacheDir(),
+        pb_detail_loading,
+        iv_detail_avatar
+      );
 
       tv_detail_username.setText(user.getUsername());
       tv_detail_id.setText("ID: " + user.getId());

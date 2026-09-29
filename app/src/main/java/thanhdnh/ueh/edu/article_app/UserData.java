@@ -3,7 +3,9 @@ package thanhdnh.ueh.edu.article_app;
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
+import android.view.View;
 import android.widget.GridView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -37,7 +39,10 @@ public class UserData {
     return null;
   }
 
-  public void loadData(String url, Activity activity){
+  public void loadData(String url, Activity activity, ProgressBar progressBar){
+      if (progressBar != null) {
+          progressBar.setVisibility(View.VISIBLE);
+      }
       executor.execute(()->{
           File file = Downloader.downloadFile(url, context.getCacheDir());
           if(file != null) {
@@ -50,6 +55,9 @@ public class UserData {
                 activity.runOnUiThread(()->{
                   UserAdapter adapter = new UserAdapter(data.getUsers(), context);
                   gridview.setAdapter(adapter);
+                  if (progressBar != null) {
+                    progressBar.setVisibility(View.GONE);
+                  }
                 });
                 return;
               }
@@ -64,6 +72,9 @@ public class UserData {
             data = createFallbackUsers();
             UserAdapter adapter = new UserAdapter(data.getUsers(), context);
             gridview.setAdapter(adapter);
+            if (progressBar != null) {
+              progressBar.setVisibility(View.GONE);
+            }
           });
       });
   }
@@ -85,16 +96,16 @@ public class UserData {
 
   private UserList createFallbackUsers() {
     ArrayList<UserProfile> list = new ArrayList<>();
-    list.add(new UserProfile(1, "nguyenvana", "nguyenvana@gmail.com", "0901234567", "Sinh vien nam 3 nganh CNTT", "https://i.pravatar.cc/300?img=1", "Lap trinh, Doc sach"));
-    list.add(new UserProfile(2, "tranthib", "tranthib@gmail.com", "0912345678", "Designer tai cong ty ABC", "https://i.pravatar.cc/300?img=2", "Ve tranh, Chup anh"));
-    list.add(new UserProfile(3, "levanc", "levanc@gmail.com", "0923456789", "Ky su phan mem Mobile", "https://i.pravatar.cc/300?img=3", "Boi loi, Chay bo"));
-    list.add(new UserProfile(4, "phamthid", "phamthid@gmail.com", "0934567890", "Giang vien dai hoc AI", "https://i.pravatar.cc/300?img=4", "Nghien cuu, Viet blog"));
-    list.add(new UserProfile(5, "hoangvane", "hoangvane@gmail.com", "0945678901", "Freelancer Web UI/UX", "https://i.pravatar.cc/300?img=5", "Code, Nghe nhac"));
-    list.add(new UserProfile(6, "dovang", "dovang@gmail.com", "0956789012", "Marketing Specialist", "https://i.pravatar.cc/300?img=6", "Viet content, The thao"));
-    list.add(new UserProfile(7, "buithih", "buithih@gmail.com", "0967890123", "Data Analyst", "https://i.pravatar.cc/300?img=7", "Phan tich, Tap gym"));
-    list.add(new UserProfile(8, "ngovani", "ngovani@gmail.com", "0978901234", "Product Manager", "https://i.pravatar.cc/300?img=8", "Quan ly, Co vua"));
-    list.add(new UserProfile(9, "lythik", "lythik@gmail.com", "0989012345", "Sinh vien thuc tap", "https://i.pravatar.cc/300?img=9", "Hoc ngoai ngu, Du lich"));
-    list.add(new UserProfile(10, "trinhvanl", "trinhvanl@gmail.com", "0990123456", "Backend Java Developer", "https://i.pravatar.cc/300?img=10", "Lap trinh, Guitar"));
+    list.add(new UserProfile(1, "nguyenvana", "nguyenvana@gmail.com", "0901234567", "Sinh vien nam 3 nganh CNTT", "https://randomuser.me/api/portraits/men/11.jpg", "Lap trinh, Doc sach"));
+    list.add(new UserProfile(2, "tranthib", "tranthib@gmail.com", "0912345678", "Designer tai cong ty ABC", "https://randomuser.me/api/portraits/women/12.jpg", "Ve tranh, Chup anh"));
+    list.add(new UserProfile(3, "levanc", "levanc@gmail.com", "0923456789", "Ky su phan mem Mobile", "https://randomuser.me/api/portraits/men/33.jpg", "Boi loi, Chay bo"));
+    list.add(new UserProfile(4, "phamthid", "phamthid@gmail.com", "0934567890", "Giang vien dai hoc AI", "https://randomuser.me/api/portraits/women/44.jpg", "Nghien cuu, Viet blog"));
+    list.add(new UserProfile(5, "hoangvane", "hoangvane@gmail.com", "0945678901", "Freelancer Web UI/UX", "https://randomuser.me/api/portraits/men/55.jpg", "Code, Nghe nhac"));
+    list.add(new UserProfile(6, "dovang", "dovang@gmail.com", "0956789012", "Marketing Specialist", "https://randomuser.me/api/portraits/women/66.jpg", "Viet content, The thao"));
+    list.add(new UserProfile(7, "buithih", "buithih@gmail.com", "0967890123", "Data Analyst", "https://randomuser.me/api/portraits/men/77.jpg", "Phan tich, Tap gym"));
+    list.add(new UserProfile(8, "ngovani", "ngovani@gmail.com", "0978901234", "Product Manager", "https://randomuser.me/api/portraits/women/88.jpg", "Quan ly, Co vua"));
+    list.add(new UserProfile(9, "lythik", "lythik@gmail.com", "0989012345", "Sinh vien thuc tap", "https://randomuser.me/api/portraits/men/99.jpg", "Hoc ngoai ngu, Du lich"));
+    list.add(new UserProfile(10, "trinhvanl", "trinhvanl@gmail.com", "0990123456", "Backend Java Developer", "https://randomuser.me/api/portraits/women/90.jpg", "Lap trinh, Guitar"));
     return new UserList(list);
   }
 }

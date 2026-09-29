@@ -67,12 +67,27 @@
 
         </LinearLayout>
 
-        <!-- Avatar bo góc -->
-        <ImageView
-          android:id="@+id/iv_detail_avatar"
+        <!-- Avatar bo góc + Thanh tiến trình ngang -->
+        <FrameLayout
           android:layout_width="100dp"
-          android:layout_height="100dp"
-          tools:srcCompat="@tools:sample/avatars" />
+          android:layout_height="100dp">
+
+          <ImageView
+            android:id="@+id/iv_detail_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+          <ProgressBar
+            android:id="@+id/pb_detail_loading"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_gravity="bottom"
+            android:indeterminate="true"
+            android:visibility="visible" />
+
+        </FrameLayout>
 
       </LinearLayout>
 

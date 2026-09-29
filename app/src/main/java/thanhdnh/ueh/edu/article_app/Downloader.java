@@ -45,7 +45,15 @@ public class Downloader {
     }
     return null;
   }
+
   public static void downloadWithProgress(String inputurl, Handler mainHandler, Context context, File where2store, ProgressBar progressBar, ImageView imageView) {
+    if (progressBar != null) {
+      mainHandler.post(() -> {
+        progressBar.setVisibility(ProgressBar.VISIBLE);
+        progressBar.setProgress(0);
+      });
+    }
+
     OkHttpClient client = new OkHttpClient();
     Request request = new Request.Builder().url(inputurl).build();
 
@@ -53,14 +61,20 @@ public class Downloader {
       @Override
       public void onFailure(Call call, IOException e) {
         mainHandler.post(() -> {
-          progressBar.setVisibility(ProgressBar.INVISIBLE);
+          if (progressBar != null) {
+            progressBar.setVisibility(ProgressBar.INVISIBLE);
+          }
         });
       }
 
       @Override
       public void onResponse(Call call, Response response) {
         if (!response.isSuccessful()) {
-          mainHandler.post(() -> {});
+          mainHandler.post(() -> {
+            if (progressBar != null) {
+              progressBar.setVisibility(ProgressBar.INVISIBLE);
+            }
+          });
           return;
         }
 
@@ -69,7 +83,14 @@ public class Downloader {
         String contentType = response.header("Content-Type", "");
         String extension = getExtensionFromMimeType(contentType);
 
-        try (OutputStream outputStream = new FileOutputStream(where2store + "/downloaded_file" + extension)) {
+        File outputFile;
+        try {
+          outputFile = File.createTempFile("downloaded_img", extension, where2store);
+        } catch (Exception e) {
+          outputFile = new File(where2store, "downloaded_file" + extension);
+        }
+
+        try (OutputStream outputStream = new FileOutputStream(outputFile)) {
           byte[] buffer = new byte[1024];
           long downloadedBytes = 0;
           int bytesRead;
@@ -77,18 +98,29 @@ public class Downloader {
           while ((bytesRead = inputStream.read(buffer)) != -1) {
             outputStream.write(buffer, 0, bytesRead);
             downloadedBytes += bytesRead;
-            int progress = (int) ((downloadedBytes * 100) / totalBytes);
-            mainHandler.post(() -> progressBar.setProgress(progress));
+            if (totalBytes > 0 && progressBar != null) {
+              int progress = (int) ((downloadedBytes * 100) / totalBytes);
+              mainHandler.post(() -> progressBar.setProgress(progress));
+            }
           }
           outputStream.flush();
 
+          final String path = outputFile.getAbsolutePath();
           mainHandler.post(() -> {
-            cached_file_path = where2store + "/downloaded_file" + extension;
-            imageView.setImageURI(Uri.parse(cached_file_path));
-            progressBar.setVisibility(ProgressBar.INVISIBLE);
+            cached_file_path = path;
+            if (imageView != null) {
+              imageView.setImageURI(Uri.parse(path));
+            }
+            if (progressBar != null) {
+              progressBar.setVisibility(ProgressBar.INVISIBLE);
+            }
           });
         } catch (Exception e) {
-          mainHandler.post(() -> {});
+          mainHandler.post(() -> {
+            if (progressBar != null) {
+              progressBar.setVisibility(ProgressBar.INVISIBLE);
+            }
+          });
         }
       }
     });
